@@ -179,15 +179,15 @@ void display(){
     //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    glBegin(GL_LINES);
-        glColor3f(1.0, 1.0, 1.0);
-        glVertex2f(-1000, 0);
-        glVertex2f(1000, 0);
-
-        glColor3f(1.0, 1.0, 1.0);
-        glVertex2f(0, -1000);
-        glVertex2f(0, 1000);
-    glEnd();
+//    glBegin(GL_LINES);
+//        glColor3f(1.0, 1.0, 1.0);
+//        glVertex2f(-1000, 0);
+//        glVertex2f(1000, 0);
+//
+//        glColor3f(1.0, 1.0, 1.0);
+//        glVertex2f(0, -1000);
+//        glVertex2f(0, 1000);
+//    glEnd();
 
     player();
     enemy();
@@ -209,16 +209,16 @@ void myKeyboard(unsigned char key, int x, int y){
 }
 
 void mySpecial(int key, int x, int y){
-    if (key == GLUT_KEY_UP){
+    if (key == GLUT_KEY_UP && playerY + playerInfo.top < 1000){
         playerY += playerSpeed;
     }
-    else if(key == GLUT_KEY_DOWN){
+    else if(key == GLUT_KEY_DOWN && playerY > -1000){
         playerY -= playerSpeed;
     }
-    else if(key == GLUT_KEY_LEFT){
+    else if(key == GLUT_KEY_LEFT && playerX > -1000){
         playerX -= playerSpeed;
     }
-    else if(key == GLUT_KEY_RIGHT ){
+    else if(key == GLUT_KEY_RIGHT  && playerX + playerInfo.right < 1000){
         playerX += playerSpeed;
     }
 
