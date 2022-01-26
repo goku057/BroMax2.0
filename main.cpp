@@ -179,15 +179,15 @@ void display(){
     //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    glBegin(GL_LINES);
-        glColor3f(1.0, 1.0, 1.0);
-        glVertex2f(-1000, 0);
-        glVertex2f(1000, 0);
-
-        glColor3f(1.0, 1.0, 1.0);
-        glVertex2f(0, -1000);
-        glVertex2f(0, 1000);
-    glEnd();
+//    glBegin(GL_LINES);
+//        glColor3f(1.0, 1.0, 1.0);
+//        glVertex2f(-1000, 0);
+//        glVertex2f(1000, 0);
+//
+//        glColor3f(1.0, 1.0, 1.0);
+//        glVertex2f(0, -1000);
+//        glVertex2f(0, 1000);
+//    glEnd();
 
     player();
     enemy();
